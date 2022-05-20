@@ -45,16 +45,12 @@ def args_and_config():
         if not args.restart:
             if os.path.exists(args.log_path):
                 shutil.rmtree(args.log_path)
-                shutil.rmtree(args.mask_path)
                 shutil.rmtree(tb_path)
                 os.makedirs(args.log_path)
-                os.makedirs(args.mask_path)
                 os.makedirs(tb_path)
             else:
                 if not os.path.exists(args.log_path):
                     os.makedirs(args.log_path)
-                if not os.path.exists(args.mask_path):
-                    os.makedirs(args.mask_path)
                 if not os.path.exists(tb_path):
                     os.makedirs(tb_path)
 
