@@ -30,7 +30,7 @@ Model:
   resamp_with_conv: True
 
 Train:
-  epoch: 3000
+  epoch: 5000
   loss_type: 'square'   # 'linear'
   ema_rate: 0.9999
   ema: True
