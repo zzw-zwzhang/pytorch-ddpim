@@ -38,10 +38,10 @@ class Schedule(object):
 
     def denoising(self, img_n, t_end, t_start, model):
         if self.args.sample_type == 'ddim':
-            img_next = DDIM(img_n, t_start, t_end, model, self.alphas_cump)
+            img_next = DDIM(img_n, t_start, t_end, model, self.alphas_cump_pre)
             return img_next
         elif self.args.sample_type == 'ddpm':
-            img_next = DDPM(img_n, t_start, t_end, model, self.alphas_cump)
+            img_next = DDPM(img_n, t_start, t_end, model, self.alphas_cump_pre)
             return img_next
         else:
             print("Your selected sample type is not supported")
